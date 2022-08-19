@@ -28,5 +28,6 @@
     "url": "https://github.com/jordanheidlage/tech_blog_jh/issues"
   },
   "homepage": "https://github.com/jordanheidlage/tech_blog_jh#readme",
-  "description": ""
+  "description": "## Your Task",
+  "devDependencies": {}
 }
