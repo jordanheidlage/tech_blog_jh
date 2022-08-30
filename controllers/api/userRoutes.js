@@ -15,7 +15,7 @@ const { User } = require('../../models');
 //   } catch (err) {
 //     res.status(400).json(err);
 //   }
-});
+// });
 
 router.post('/login', async (req, res) => {
   try {
