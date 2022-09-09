@@ -1,1 +1,10 @@
-This needs to display everyone's posts
+{{#each topic as |topics| }}
+<div class="row mb-4 topics">
+  <div class="col-md-5">
+    <h2>
+      <a href="/topics/{{topics.id}}">{{topics.name}}</a>
+    </h2>
+    <p>Created by {{topics.user.name}} on {{format_date topics.date_created}}</p>
+  </div>
+</div>
+{{/each}}

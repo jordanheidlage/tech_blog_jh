@@ -14,13 +14,12 @@ const newFormHandler = async (event) => {
             },
         });
         if (response.ok) {
-            document.location.replace('/profile');
+            document.location.replace('/dashboard');
         } else {
             alert('Failed to create topic');
         }
     }
 
-    document
-        .querySelector('.new-topic-form')
-        .addEventListener('submit', newFormHandler);
 };
+document.querySelector('.new-topic-form')
+.addEventListener('submit', newFormHandler);

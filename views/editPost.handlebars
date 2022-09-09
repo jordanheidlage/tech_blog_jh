@@ -1,2 +1,28 @@
-this needs to display one of our users posts to edit
+
+<div class="text-center">
+    <h2>{{name}}</h2>
+    <p>Created by {{user.name}} on {{format_date date_created}}</p>
+    <p>{{description}}</p>
+</div>
+
+<form class="form start-editing">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </div>
+</form>
+</div>
+
+<form class="form editing-form hide">
+    <div class="form-group">
+        <textarea class="form-input" id="editing-desc" name="editing-desc">{{description}}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </div>
+<button type="button" class="delete-post-btn btn">Delete Post</button>
+</form>
+</div>
+
+<script src="/js/editTopic.js"></script>
+<script src="/js/deleteTopic.js"></script>
  
