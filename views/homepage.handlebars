@@ -1,10 +1,10 @@
-{{#each topic as |topics| }}
+{{#each topics as |topic| }}
 <div class="row mb-4 topics">
   <div class="col-md-5">
     <h2>
-      <a href="/topics/{{topics.id}}">{{topics.name}}</a>
+      <a href="/topic/{{topic.id}}">{{topic.title}}</a>
     </h2>
-    <p>Created by {{topics.user.name}} on {{format_date topics.date_created}}</p>
+    <p>Created by {{topic.user.username}} on {{format_date topic.createdAt}}</p>
   </div>
 </div>
 {{/each}}

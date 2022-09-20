@@ -1,0 +1,22 @@
+<form class="form edit-topic-form">
+  <input type="hidden" id="topic-id" value="{{topic.id}}"/>
+  
+  <div class="form-group">
+    <label for="topic-editPost">Edit Topic</label>
+    <input class="form-input" type="text" id="topic-editPost" name="topic-editPost" value="{{topic.title}}" />
+  </div>
+  <div class="form-group">
+    <label for="topic-editDescription">Edit Content</label>
+    <textarea type="text" id="topic-editDescription" name="topic-editPost">{{topic.description}}</textarea>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Edit</button>
+    <button type="button" id="delete-button" class="delete-post-btn btn">Delete Post</button>
+  </div>
+</form>
+
+
+
+
+<script src="/js/editTopic.js"></script>
+<script src="/js/deleteTopic.js"></script>

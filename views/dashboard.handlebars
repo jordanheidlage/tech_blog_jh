@@ -1,18 +1,21 @@
 
  <h2 class="title pb-4">dashboard: your topics</h2><hr>
-{{#if topics.length}}
+
     </div>
 
     {{#each topics as |topic|}}
-        {{> topic-info topic}}
-        
-            <a href="/dashboard/edit/{{topic.id}}"><button class="button mb-5 ml-5 is-warning">edit topic</button></a>
+        {{!-- {{> topic-info topic}} --}}
+        <div>
+            <a href="/dashboard/edit/{{topic.id}}">
+            {{topic.title}}
+            </a>
         </div>
     {{/each}}
 
-{{else}}
-<h6 class="pb-4 has-text-centered is-italic">you do not currently have any topics</h6>
 
-{{/if}}
+{{!-- <h6 class="pb-4 has-text-centered is-italic">you do not currently have any topics</h6> --}}
+
+
 
 <button> <a href="/dashboard/new">Create New Post</a></button>
+

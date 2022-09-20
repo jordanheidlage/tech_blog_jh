@@ -1,0 +1,40 @@
+<div class="row mb-4 topics">
+    <div class="col-md-5">
+        <input type="hidden" id='topic-id' value="{{topic.id}}"/>
+        <h2>
+            {{topic.title}}
+        </h2>
+        <p>{{topic.description}}</p>
+
+
+        {{#if logged_in}}
+
+        <form class="comment-form">
+            <h2>Add a Comment:</h2>
+
+            <textarea id="comment-body"></textarea>
+
+            <button type="submit">add comment</button>
+        </form>
+        {{/if}}
+
+        {{#if topic.Comments}}
+        <div>
+            <h3>Comments</h3>
+            {{#each topic.Comments}}
+            <div class="row mb-4 topics">
+                <div class="col-md-5">
+                    <p>
+                        {{comment}}
+                    </p>
+                    <p>by {{User.username}} on {{format_date createdAt}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+    </div>
+
+</div>
+
+<script src="/js/addComment.js"></script>

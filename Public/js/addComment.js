@@ -1,23 +1,22 @@
 
 const newCommentForm = async (event) => {
     event.preventDefault();
+    console.log("hello");
 
-    const comment = document.querySelector('#topic-comment').value.trim();
-
+    const comment = document.querySelector('#comment-body').value.trim();
+    const topic_id = document.querySelector('#topic-id').value.trim();
     if (comment) {
-        const response = await fetch(`/api/topics`, {
+        await fetch(`/api/comments`, {
             method: 'POST',
-            body: JSON.stringify({ comment }),
+            body: JSON.stringify({ comment, topic_id }),
             headers: {
                 'Content-Type': 'application/json',
             },
         });
-        if (response.ok) {
-            document.location.replace('/profile');
-        } else {
-            alert('Failed to create topic');
-        }
+        
+            document.location.reload();
+        
     }
 
-document.querySelector('.add-comment-form').addEventListener('submit', newCommentForm);
 };
+document.querySelector('.comment-form').addEventListener('submit', newCommentForm);
