@@ -22,12 +22,11 @@ This application will allow a user post and comment on a tech blog
   -exit
 
   After quitting your SQL terminal, run the command:
-  -"npm run seed"
   -"npm start"
-   You can then utilize Insomnia (https://insomnia.rest/download) to test your routes after logging in.
 
-  Video Walkthrough:
-     https://drive.google.com/file/d/1eePGCbG-aBpfLd7_9j7RSmNv6kgUlBIz/view
+  Deployed Heroku Link:
+  https://jth-tech-blog.herokuapp.com/
+
   ## Credits
   Ohio State University instructional staff, and myself
   ## Contributions
